@@ -1,5 +1,6 @@
 import { Center, Heading, Card } from "@chakra-ui/react";
 import { data } from "../utils/data";
+import { RecipeCard } from "../components/RecipeCard";
 
 export const RecipeListPage = () => {
   return (
@@ -7,7 +8,7 @@ export const RecipeListPage = () => {
       <Heading>The Recipe List Page</Heading>
       <Card>
         {data.hits.map((recipe) => {
-          return <Heading>{recipe.label}</Heading>;
+          <RecipeCard recipe={recipe} key={recipe.label} />;
         })}
       </Card>
     </Center>
