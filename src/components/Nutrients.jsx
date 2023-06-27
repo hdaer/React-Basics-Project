@@ -1,6 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 
-export const Nutrients = ({ selectedRecipe }) => {
+export const Nutrients = ({ recipeObject }) => {
   const {
     recipe: {
       totalNutrients: {
@@ -11,7 +11,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const {
     recipe: {
@@ -23,7 +23,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const {
     recipe: {
@@ -31,7 +31,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         FAT: { label: fatLabel, quantity: fatQuantity, unit: fatUnit },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const {
     recipe: {
@@ -43,7 +43,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const {
     recipe: {
@@ -51,7 +51,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         CHOCDF: { label: carbsLabel, quantity: carbsQuantity, unit: carbsUnit },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const {
     recipe: {
@@ -59,7 +59,7 @@ export const Nutrients = ({ selectedRecipe }) => {
         NA: { label: sodiumLabel, quantity: sodiumQuantity, unit: sodiumUnit },
       },
     },
-  } = selectedRecipe;
+  } = recipeObject;
 
   const roundedEnergyQuantity = Math.round(energyQuantity);
   const roundedProteinQuantity = Math.round(proteinQuantity);

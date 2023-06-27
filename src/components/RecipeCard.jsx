@@ -1,102 +1,77 @@
-import {
-  Image,
-  Grid,
-  GridItem,
-  useMediaQuery,
-  Heading,
-} from "@chakra-ui/react";
-import { Nutrients } from "../components/Nutrients";
+import { Card, Flex, Image, CardBody, Stack, Heading } from "@chakra-ui/react";
 import { Tag } from "./ui/Tag";
 
-export const RecipeCard = ({ selectedRecipe }) => {
-  const [isMobile] = useMediaQuery("(max-width: 400px)");
+export const RecipeCard = ({ recipeObject }) => {
+  const vegLabels = recipeObject.recipe.healthLabels.filter((healthLabel) => {
+    return (
+      healthLabel.toLowerCase() === "vegan" ||
+      healthLabel.toLowerCase() === "vegetarian"
+    );
+  });
 
   return (
-    <Grid
-      backgroundColor="white"
-      templateColumns="repeat(2, 1fr)"
-      gap="2rem"
-      w="65vw"
-      padding="4"
+    <Card
+      w="20rem"
+      h="30rem"
+      borderRadius="20px"
+      backgroundColor="gray.100"
+      p
+      // onClick={() => clickFn(item)}
+      cursor="pointer"
+      _hover={{ transform: "scale(1.01)" }}
     >
-      {/*recipe name*/}
-      <GridItem
-        justifySelf="center"
-        alignSelf="center"
-        fontSize="20px"
-        fontWeight="bold"
-      >
-        <Heading size="md">{selectedRecipe.recipe.label}</Heading>
-      </GridItem>
-      {/*recipe image*/}
-      <GridItem justifySelf="center" alignSelf="center">
-        <Image src={selectedRecipe.recipe.image} h="50vh" objectFit="cover" />
-      </GridItem>
+      <CardBody>
+        <Image
+          w="100%"
+          h="12rem"
+          src={recipeObject.recipe.image}
+          objectFit="cover"
+          borderRadius="20px"
+        />
+        <Stack
+          display="flex"
+          flexDir="column"
+          alignItems="center"
+          justifyContent="center"
+          mt="6"
+        >
+          <Heading size="sm" color="gray.400">
+            {recipeObject.recipe.mealType}
+          </Heading>
+          <Heading textAlign="center" size="md">
+            {recipeObject.recipe.label}
+          </Heading>
 
-      <GridItem>
-        <Grid rowGap="1rem">
-          {/*meal type*/}
-          <GridItem>
-            <Heading size="xsm">Meal type:</Heading>
-            {selectedRecipe.recipe.mealType}
-          </GridItem>
+          {/*Vegan/Vegetarian health labels*/}
+          {!(recipeObject.recipe.cautions.length == 0) && (
+            <Flex>
+              <Tag array={vegLabels} color="blue" />
+            </Flex>
+          )}
+
+          <Flex gap={2}>
+            <Tag array={recipeObject.recipe.dietLabels} color="purple" />
+          </Flex>
+
           {/*dish type*/}
-          <GridItem>
-            <Heading size="xsm">Dish:</Heading>
-            {selectedRecipe.recipe.dishType}
-          </GridItem>
-
-          {!(selectedRecipe.recipe.totalTime === 0) && (
-            <GridItem>
-              <Heading size="xsm">Total Cooking time:</Heading>
-              {selectedRecipe.recipe.totalTime}
-            </GridItem>
-          )}
-          {/*Servings*/}
-          <GridItem>
-            <Heading size="xsm">Servings:</Heading>
-            {selectedRecipe.recipe.yield}
-          </GridItem>
-          {/*ingredients*/}
-          <GridItem>
-            <Heading size="xsm">Ingredients:</Heading>
-            {selectedRecipe.recipe.ingredientLines.map((string) => {
-              return <p key="string">{string}</p>;
-            })}
-          </GridItem>
-        </Grid>
-      </GridItem>
-
-      <GridItem>
-        <Grid rowGap="1rem" justifyContent="left">
-          {/*health labels*/}
-          <GridItem w="100%">
-            <Heading size="xsm">Health labels:</Heading>{" "}
-            <Tag array={selectedRecipe.recipe.healthLabels} color="blue" />
-          </GridItem>
-          {/*diet labels*/}
-
-          {!(selectedRecipe.recipe.dietLabels.length == 0) && (
-            <GridItem>
-              <Heading size="xsm">Diet:</Heading>
-              <Tag array={selectedRecipe.recipe.dietLabels} color="purple" />
-            </GridItem>
-          )}
+          <Flex columnGap=".5em">
+            <Heading size="sm" color="gray.400">
+              Dish:
+            </Heading>
+            <Heading size="sm" color="black">
+              {recipeObject.recipe.dishType}
+            </Heading>
+          </Flex>
 
           {/*cautions*/}
-
-          {!(selectedRecipe.recipe.cautions.length == 0) && (
-            <GridItem>
+          {!(recipeObject.recipe.cautions.length == 0) && (
+            <>
               <Heading size="xsm">Cautions:</Heading>
-              <Tag array={selectedRecipe.recipe.cautions} color="red" />
-            </GridItem>
+              <Tag array={recipeObject.recipe.cautions} color="red" />
+            </>
           )}
-
-          <GridItem>
-            <Nutrients selectedRecipe={selectedRecipe} />
-          </GridItem>
-        </Grid>
-      </GridItem>
-    </Grid>
+        </Stack>
+      </CardBody>
+    </Card>
   );
 };

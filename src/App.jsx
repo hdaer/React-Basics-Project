@@ -5,7 +5,7 @@ import { Flex } from "@chakra-ui/react";
 import { data } from "./utils/data";
 
 export const App = () => {
-  const [selectedRecipe, setSelectedRecipe] = useState(data.hits[14]);
+  const [selectedRecipe, setSelectedRecipe] = useState();
 
   return (
     <>
@@ -15,7 +15,7 @@ export const App = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <RecipePage selectedRecipe={selectedRecipe} />
+          <RecipePage recipeObject={selectedRecipe} />
         </Flex>
       ) : (
         <RecipeListPage />
