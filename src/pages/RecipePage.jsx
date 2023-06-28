@@ -4,11 +4,12 @@ import {
   GridItem,
   useMediaQuery,
   Heading,
+  Button,
 } from "@chakra-ui/react";
 import { Nutrients } from "../components/Nutrients";
 import { Tag } from "../components/ui/Tag";
 
-export const RecipePage = ({ recipeObject }) => {
+export const RecipePage = ({ clickFn, recipeObject }) => {
   const [isMobile] = useMediaQuery("(max-width: 400px)");
 
   return (
@@ -35,6 +36,7 @@ export const RecipePage = ({ recipeObject }) => {
         <Image src={recipeObject.recipe.image} h="50vh" objectFit="cover" />
       </GridItem>
 
+      {/*body left grid*/}
       <GridItem>
         <Grid rowGap="1rem">
           {/*meal type*/}
@@ -66,16 +68,17 @@ export const RecipePage = ({ recipeObject }) => {
           {/*ingredients*/}
           <GridItem>
             <Heading size="xsm">Ingredients:</Heading>
-            {recipeObject.recipe.ingredientLines.map((string) => {
-              return <p key="string">{string}</p>;
+            {recipeObject.recipe.ingredientLines.map((line) => {
+              return <p key="line">{line}</p>;
             })}
           </GridItem>
         </Grid>
       </GridItem>
 
-      {/*health labels*/}
+      {/*body right grid*/}
       <GridItem>
         <Grid rowGap="1rem" justifyContent="left">
+          {/*health labels*/}
           <GridItem w="100%">
             <Heading size="xsm">Health labels:</Heading>
             <Tag array={recipeObject.recipe.healthLabels} color="blue" />
@@ -102,6 +105,11 @@ export const RecipePage = ({ recipeObject }) => {
             <Nutrients recipeObject={recipeObject} />
           </GridItem>
         </Grid>
+      </GridItem>
+      <GridItem colSpan="2" justifySelf="center">
+        <Button colorScheme="facebook" onClick={() => clickFn()}>
+          Back to all Recipes
+        </Button>
       </GridItem>
     </Grid>
   );

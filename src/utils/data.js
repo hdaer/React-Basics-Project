@@ -1927,8 +1927,8 @@ export const data = JSON.parse(`{
         "cautions": [
           "Tree-Nuts",
           "Shellfish",
-          "Sulfites",
-          "FODMAP"
+          "Sulfites"
+          
         ],
         "ingredientLines": [
           "1 1/2 lb salmon",

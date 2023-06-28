@@ -1,7 +1,7 @@
 import { Card, Flex, Image, CardBody, Stack, Heading } from "@chakra-ui/react";
 import { Tag } from "./ui/Tag";
 
-export const RecipeCard = ({ recipeObject }) => {
+export const RecipeCard = ({ recipeObject, clickFn }) => {
   const vegLabels = recipeObject.recipe.healthLabels.filter((healthLabel) => {
     return (
       healthLabel.toLowerCase() === "vegan" ||
@@ -15,8 +15,7 @@ export const RecipeCard = ({ recipeObject }) => {
       h="30rem"
       borderRadius="20px"
       backgroundColor="gray.100"
-      p
-      // onClick={() => clickFn(item)}
+      onClick={() => clickFn(recipeObject)}
       cursor="pointer"
       _hover={{ transform: "scale(1.01)" }}
     >
@@ -58,7 +57,7 @@ export const RecipeCard = ({ recipeObject }) => {
             <Heading size="sm" color="gray.400">
               Dish:
             </Heading>
-            <Heading size="sm" color="black">
+            <Heading size="sm" color="blue.500">
               {recipeObject.recipe.dishType}
             </Heading>
           </Flex>

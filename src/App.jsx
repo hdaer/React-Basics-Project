@@ -15,10 +15,13 @@ export const App = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <RecipePage recipeObject={selectedRecipe} />
+          <RecipePage
+            recipeObject={selectedRecipe}
+            clickFn={setSelectedRecipe}
+          />
         </Flex>
       ) : (
-        <RecipeListPage />
+        <RecipeListPage clickFn={setSelectedRecipe} />
       )}
     </>
   );
