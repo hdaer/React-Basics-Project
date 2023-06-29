@@ -1,4 +1,4 @@
-import { Flex, Input } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import { data } from "../utils/data";
 import { RecipeCard } from "../components/RecipeCard";

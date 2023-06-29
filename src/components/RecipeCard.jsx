@@ -48,8 +48,14 @@ export const RecipeCard = ({ recipeObject, clickFn }) => {
             </Flex>
           )}
 
+          {/*diet labels*/}
           <Flex gap={2}>
-            <Tag array={recipeObject.recipe.dietLabels} color="purple" />
+            <Tag
+              display="flex"
+              justifyContent="center"
+              array={recipeObject.recipe.dietLabels}
+              color="purple"
+            />
           </Flex>
 
           {/*dish type*/}
@@ -66,7 +72,12 @@ export const RecipeCard = ({ recipeObject, clickFn }) => {
           {!(recipeObject.recipe.cautions.length == 0) && (
             <>
               <Heading size="xsm">Cautions:</Heading>
-              <Tag array={recipeObject.recipe.cautions} color="red" />
+              <Tag
+                array={recipeObject.recipe.cautions}
+                color="red"
+                display="flex"
+                justifyContent="center"
+              />
             </>
           )}
         </Stack>

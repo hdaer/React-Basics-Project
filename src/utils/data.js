@@ -6,6 +6,7 @@ export const data = JSON.parse(`{
   "hits": [
     {
       "recipe": {
+        "UUID": "07d90d39-668c-4c0b-b24a-6e3cacfd1b35",
         "label": "Paleo Chocolate Covered Caramels",
         "image": "https://media.wincacademy.nl/react/images/final-project/chocolate-caramel.jpeg",
         "url": "http://ourfineday.com/happy-birthday-travis-and-a-recipe-for-chocolate-covered-chocolates/",
@@ -312,6 +313,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "51e40156-edc4-4457-bc5e-b93fa501eb44",
         "label": "Grilled Pork Chops with Chipotle Sauce",
         "image": "https://media.wincacademy.nl/react/images/final-project/Grilled-Pork-Chop-with-Chipotle-Sauce.jpeg",
         "url": "https://grumpyshoneybunch.com/2009/07/grilled-pork-chops-chipotle-sauce.html",
@@ -606,6 +608,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "b435a2ee-3656-4643-aebf-ab27c1df728b",
         "label": "Slow Cooker Turkey Dip Sandwiches recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/turkey-sandwich.jpeg",
         "url": "http://www.bobbiskozykitchen.com/2015/03/slow-cooker-turkey-dip-sandwiches.html",
@@ -962,6 +965,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "b64169c7-c2f5-45c6-b1f8-5f45f6df8a08",
         "label": "Blueberry Basil Margarita Cocktail recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/blueberry-margarita.jpeg",
         "url": "http://drinkwire.liquor.com/post/blueberry-basil-margarita-cocktail-recipe/",
@@ -1255,6 +1259,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "28b08159-5f8a-42fc-b2df-077d0e45837e",
         "label": "Potato Gratin",
         "image": "https://media.wincacademy.nl/react/images/final-project/potatoes-gratin.webp",
         "url": "http://www.cookstr.com/recipes/potato-gratin-2",
@@ -1591,6 +1596,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "63b9f76d-b78d-4eed-aefa-24ad94e1a46b",
         "label": "Seafood Casserole",
         "image": "https://media.wincacademy.nl/react/images/final-project/seafood-casserol.jpeg",
         "url": "http://www.bigoven.com/recipe/Seafood-Casserole/296427",
@@ -1902,6 +1908,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "8365ecf5-db32-44fa-bc47-78d7fea6eb58",
         "label": "Green coconut curry with salmon",
         "image": "https://media.wincacademy.nl/react/images/final-project/coconut-curry-salmon.jpeg",
         "url": "http://www.aliceincookingland.com/recipe/green-coconut-curry-salmon/",
@@ -1927,7 +1934,8 @@ export const data = JSON.parse(`{
         "cautions": [
           "Tree-Nuts",
           "Shellfish",
-          "Sulfites"
+          "Sulfites",
+          "FODMAP"
           
         ],
         "ingredientLines": [
@@ -2314,6 +2322,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "cb931866-3749-44a2-9d95-8031e77daa66",
         "label": "Vegan Herb Crackers recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/herb-crackers.jpeg",        
         "url": "https://elanaspantry.com/herb-crackers/",
@@ -2608,6 +2617,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "9fbf0ef2-602f-4e6d-8849-f2b34ff9e61a",
         "label": "Baked Chicken Parm",
         "image": "https://media.wincacademy.nl/react/images/final-project/baked-chicken-parm.jpeg",
         "url": "https://food52.com/recipes/17016-baked-chicken-parm",
@@ -2965,6 +2975,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "872a4336-eabe-4f07-b1c8-47bd38d4781c",
         "label": "Parmesan grissini",
         "image": "https://media.wincacademy.nl/react/images/final-project/parmesan-grissini.jpeg",
         "url": "https://www.goodfood.com.au/recipes/parmesan-grissini-20121001-33zi8",
@@ -3250,6 +3261,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "74436bac-41df-4298-812a-2b07afb40108",
         "label": "Easy Chili Almonds recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/easy-chili-almonds.jpeg",
         "url": "http://www.pumpkinnspice.com/2017/02/05/easy-chili-almonds/",
@@ -3538,6 +3550,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "054c500e-d67b-4beb-a6f6-0665cdf5b3bd",
         "label": "Korean Seasoned Potatoes (감자 조&",
         "image": "https://media.wincacademy.nl/react/images/final-project/korean-potatoes.webp",
         "url": "http://www.food.com/recipe/korean-seasoned-potatoes-44048-51088-51312-390718",
@@ -3840,6 +3853,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "d499b02b-4569-4495-95d5-4243bcda8ddb",
         "label": "Oven Baked Mexican Rice recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/mexican-rice.webp",
         "url": "http://keciasflavorbreakthrough.com/oven-baked-mexican-rice/",
@@ -4211,6 +4225,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "65eaf8b5-4c00-450b-957b-028c92cae3e3",
         "label": "Swedish Pancakes",
         "image": "https://media.wincacademy.nl/react/images/final-project/swedish-pancakes.webp",
         "url": "http://scratchthiswithsandy.com/2014/01/19/swedish-pancakes/",
@@ -4503,6 +4518,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "333c5edf-ed8d-4085-9a08-8c21106e7206",
         "label": "Pizza with taleggio, prosciutto and pear",
         "image": "https://media.wincacademy.nl/react/images/final-project/pizza-pear.jpeg",
         "url": "https://www.goodfood.com.au/recipes/pizza-with-taleggio-prosciutto-and-pear-20111018-29wks",
@@ -4838,6 +4854,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "c3886f48-9e05-410a-899f-ffea1b63d1a8",
         "label": "Strawberry Cheesecake recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/strawberry-cheesecake.webp",
         "url": "http://allrecipes.com/recipe/222588/strawberry-cheesecake/",
@@ -5196,6 +5213,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "39544636-6630-4e3e-a1b3-64897fa624df",
         "label": "Mushroom and Spinach Ravioli",
         "image": "https://media.wincacademy.nl/react/images/final-project/spinach-ravioli.jpeg",
         "url": "http://ourlifetastesgood.blogspot.com/2012/07/mushroom-and-spinach-ravioli-with-chive.html",
@@ -5654,6 +5672,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "83bf8eec-7e1e-4022-8888-2e13dcd75f60",
         "label": "Cajun Pork Pinwheels",
         "image": "https://media.wincacademy.nl/react/images/final-project/cayun-pork-pinwheel.jpeg",
         "url": "https://www.bigoven.com/recipe/cajun-pork-pinwheels/158806",
@@ -6002,6 +6021,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "52711e24-8b0e-492f-a4e2-46037e227942",
         "label": "Fire Roasted Tomato Soup recipes",
         "image": "https://media.wincacademy.nl/react/images/final-project/tomato-soup.jpeg",
         "url": "http://therecipecritic.com/2013/02/fire-roasted-tomato-soup/",
@@ -6373,6 +6393,7 @@ export const data = JSON.parse(`{
     },
     {
       "recipe": {
+        "UUID": "f5ae94eb-ccc3-407b-878b-25ada23c67ff",
         "label": "Homemade Sweet Spaghetti Sauce",
         "image": "https://media.wincacademy.nl/react/images/final-project/sweet-spaghetti-sauce.jpeg",
         "url": "https://www.recipezazz.com/recipe/homemade-sweet-spaghetti-sauce-4752",
