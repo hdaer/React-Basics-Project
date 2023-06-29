@@ -15,6 +15,7 @@ export const RecipePage = ({ clickFn, recipeObject }) => {
 
   return (
     <>
+      {/*conditional Flex or Grid for Mobile or Desktop screens respectively */}
       {smallerThan500Px ? (
         <Flex
           flexDir="column"
@@ -36,7 +37,12 @@ export const RecipePage = ({ clickFn, recipeObject }) => {
 
           {/*recipe image*/}
           <GridItem justifySelf="center" alignSelf="center">
-            <Image src={recipeObject.recipe.image} h="50vh" objectFit="cover" />
+            <Image
+              src={recipeObject.recipe.image}
+              h="50vh"
+              objectFit="cover"
+              borderRadius="10px"
+            />
           </GridItem>
 
           {/*body left grid*/}
@@ -140,7 +146,12 @@ export const RecipePage = ({ clickFn, recipeObject }) => {
 
           {/*recipe image*/}
           <GridItem justifySelf="center" alignSelf="center">
-            <Image src={recipeObject.recipe.image} h="50vh" objectFit="cover" />
+            <Image
+              src={recipeObject.recipe.image}
+              h="50vh"
+              objectFit="cover"
+              borderRadius="10px"
+            />
           </GridItem>
 
           {/*body left grid*/}
