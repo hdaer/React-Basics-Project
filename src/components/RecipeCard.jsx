@@ -4,8 +4,8 @@ import { Tag } from "./ui/Tag";
 export const RecipeCard = ({ recipeObject, clickFn }) => {
   const vegLabels = recipeObject.recipe.healthLabels.filter((healthLabel) => {
     return (
-      healthLabel.toLowerCase() === "vegan" ||
-      healthLabel.toLowerCase() === "vegetarian"
+      healthLabel.toLowerCase().includes("vegan") ||
+      healthLabel.toLowerCase().includes("vegetarian")
     );
   });
 
@@ -42,7 +42,7 @@ export const RecipeCard = ({ recipeObject, clickFn }) => {
           </Heading>
 
           {/*Vegan/Vegetarian health labels*/}
-          {!(recipeObject.recipe.cautions.length == 0) && (
+          {!(recipeObject.recipe.healthLabels.length == 0) && (
             <Flex>
               <Tag array={vegLabels} color="blue" />
             </Flex>
